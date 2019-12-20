@@ -1,0 +1,25 @@
+{
+    "name": "olakunlevpn/gladepaysdk-php",
+    "description": "A Gladpay SDK written in PHP",
+    "keywords": [
+        "Gladpay", "api", "payment", "gateway"
+    ],
+    "homepage": "https://github.com/olakunlevpn/gladpaysdk-php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "olakunlevpn",
+            "email": "olakunlevpn@live.com",
+            "homepage": "http://olakunlevpn.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Olakunlevpn\\Gladepaysdk\\": "src"
+        }
+    }
+
+
+}
