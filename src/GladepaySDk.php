@@ -634,7 +634,7 @@ class GladepaySDk
 
           $this->url = $this->APIEndpoint."/resources";
           $this->params = [
-                "inquire": "accountname",
+                "inquire" => "accountname",
                 "accountnumber" => $number,
                 "bankcode" => $code
             ];
