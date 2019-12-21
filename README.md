@@ -28,8 +28,16 @@
 
 1. Next, require Composer's autoloader, in your application, to automatically load the Gladpaysdk in your project:
 ```
+require_once "vendor/autoload.php";
+
+
 use Olakunlevpn\Gladpaysdk\GladepaySDk;
-$Glade = new GladepaySDk('GP0000001', '123456789', true);
+
+$merchant_id = "GP0000001"; //To get your live credentials register here https://dashboard.gladepay.com/register
+$merchant_key = "123456789"; //To get your live credentials register here https://dashboard.gladepay.com/register
+
+//Auth session with your Merchant ID and Merchant Key
+$Glade = new GladepaySDk($merchant_id, $merchant_key, true); //Change value to true if you are using demo merchant and key
 ```
 
 
