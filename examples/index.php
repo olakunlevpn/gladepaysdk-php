@@ -2,9 +2,9 @@
 
 require_once "../vendor/autoload.php";
 use Olakunlevpn\Gladepaysdk\GladepaySDk;
-$class = new GladepaySDk('GP0000001', '123456789', true); //Change value to true if you are using demo merchant and key
+$Glade = new GladepaySDk('GP0000001', '123456789', true); //Change value to true if you are using demo merchant and key
 
-//var_dump($class->getListOfBill());
+//var_dump($Glade->getListOfBill());
 
 /*
 $json_initiate = '
@@ -33,5 +33,5 @@ $json_initiate = '
 */
 /*
 $json_request = json_decode($json_initiate, true);
-var_dump($class->cardPayment($json_request['user'], $json_request['card'], $json_request['amount'], $json_request['country'], $json_request['currency']));
+var_dump($Glade->cardPayment($json_request['user'], $json_request['card'], $json_request['amount'], $json_request['country'], $json_request['currency']));
 */
