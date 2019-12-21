@@ -19,7 +19,12 @@
         "psr-4": {
             "Olakunlevpn\\Gladepaysdk\\": "src"
         }
-    }
+    },
+    "require": {
+       "php": ">=7.0",
+       "ext-curl": "*",
+       "ext-bcmath": "*"
+   }
 
 
 }
