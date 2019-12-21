@@ -30,7 +30,7 @@ class GladepaySDk
 
     /**
      * Friendly welcome
-     * This function does nothing believe me.  kindly ignore it 
+     * This function does nothing believe me.  kindly ignore it
      * @param string $phrase Phrase to return
      *
      *  * All methods return an array.
@@ -174,12 +174,12 @@ class GladepaySDk
     /**
     * Card payment
     *
-    * @param string $user_details user information details such as first name, last name, address,  Ip address and finger print and others 
-    * @param string $card_details Client full Card information 
-    * @param string $amount Amount to be card on the card, this will include fees 
+    * @param string $user_details user information details such as first name, last name, address,  Ip address and finger print and others
+    * @param string $card_details Client full Card information
+    * @param string $amount Amount to be card on the card, this will include fees
     * @param string $country User country extracted from the input form
     * @param string $currency User country current code EG: NG
-    * @param string $type 
+    * @param string $type
     * @return string All methods return an array.
     */
     /*{ Example of card information and user information
@@ -257,7 +257,7 @@ class GladepaySDk
 
 
     /**
-    * Bill payment
+    * Initiate Transaction
     *
     * @param string $phrase Phrase to return
     *
@@ -302,7 +302,7 @@ class GladepaySDk
 
 
     /**
-    * Bill payment
+    * Charge User card
     *
     * @param string $phrase Phrase to return
     *
@@ -333,7 +333,7 @@ class GladepaySDk
 
 
    /**
-   * Bill payment
+   * Charge transaction with Token
    *
    * @param string $phrase Phrase to return
    *
@@ -380,7 +380,7 @@ class GladepaySDk
 
 
        /**
-        * Bill payment
+        * Validate User OTP
         *
         * @param string $phrase Phrase to return
         *
@@ -401,7 +401,7 @@ class GladepaySDk
 
 
      /**
-      * Bill payment
+      * Verify Transaction
       *
       * @param string $phrase Phrase to return
       *
@@ -421,7 +421,7 @@ class GladepaySDk
 
 
    /**
-    * Bill payment
+    * Account Payment
     *
     * @param string $phrase Phrase to return
     *
@@ -447,7 +447,7 @@ class GladepaySDk
 
 
   /**
-   * Bill payment
+   * Payment Validation
    *
    * @param string $phrase Phrase to return
    *
@@ -469,7 +469,7 @@ class GladepaySDk
 
 
    /**
-    * Bill payment
+    * Get account supported payment
     *
     * @param string $phrase Phrase to return
     *
@@ -492,7 +492,7 @@ class GladepaySDk
 
 
     /**
-     * Bill payment
+     * Get user card details with card number
      *
      * @param string $phrase Phrase to return
      *
@@ -514,7 +514,7 @@ class GladepaySDk
 
 
     /**
-     * Bill payment
+     * Get transaction charges/fees
      *
      * @param string $phrase Phrase to return
      *
@@ -546,13 +546,13 @@ class GladepaySDk
 
 
     /**
-     * Transfer Money from bank account 
+     * Transfer Money from bank account
      *
      * @param string $amount amount value to transfer
     * @param string $bankcode user bank identification code (Bank ID)
     * @param string $accountnumber rceiver account number
-    * @param string $sender_name  sender name such as firstname and last name 
-      * @param string $narration  Transaction description 
+    * @param string $sender_name  sender name such as firstname and last name
+      * @param string $narration  Transaction description
      *
      * @return string Returns the phrase passed in
     * All methods return an array.
@@ -577,7 +577,7 @@ class GladepaySDk
 
 
     /**
-     * Bill payment
+     * Verify Money Transfer
      *
      * @param string $txnRef transaction reference
      *
@@ -605,7 +605,7 @@ class GladepaySDk
 
 
     /**
-     * Het list of banks
+     *  list of banks
      *
      * @return string Returns the phrase passed in
      * All methods return an array.
