@@ -11,9 +11,12 @@ $Glade = new GladepaySDk($merchant_id, $merchant_key, true); //Change value to t
 
 $payload = $Glade->getWebhookPayload();
 $txDetails = $Glade->verifyTransaction($payload['txnRef']);
+
+
+
 //$hash = hash('sha512', $payload.$key)
 
-
+ 
 if (isset($txDetails->status) && isset($txDetails->status) == "200") {
     //A sample response from the webhook
 /*  $txDetails['status']

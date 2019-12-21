@@ -13,7 +13,6 @@
 
 
 
-**Note:** Currently under development
 
 ## 1. Installation
 

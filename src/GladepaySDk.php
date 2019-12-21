@@ -622,6 +622,20 @@ class GladepaySDk
   }
 
 
+  /**
+     * Get webhook payload
+     *
+     * @param bool $decodeJson      Set true to decode the JSON
+     * @param bool $decodeAsArray   Set true to decode the JSON as array
+     * @return type
+     */
+    public static function getWebhookPayload(bool $decodeJson = true, bool $decodeAsArray = true) {
+        if ($decodeJson) {
+            return json_decode(file_get_contents('php://input'), $decodeAsArray);
+        } else {
+            return file_get_contents('php://input');
+        }
+    }
 
 
 
