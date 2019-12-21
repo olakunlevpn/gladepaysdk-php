@@ -11,12 +11,25 @@ $Glade = new GladepaySDk($merchant_id, $merchant_key, true); //Change value to t
 
 $payload = $Glade->getWebhookPayload();
 $txDetails = $Glade->verifyTransaction($payload['txnRef']);
-
-
-
 //$hash = hash('sha512', $payload.$key)
 
- 
+
+
+/*
+Error Codes
+101	Merchant Authentication Failed.
+102	Invalid Method Call.
+103	Invalid JSON Request.
+104	Invalid Data Request.
+200	Successful
+201	Unrecognized Response From Gateway
+202	OTP Validation required
+203	Validation not successful
+204	An error has occurred
+
+
+*/
+
 if (isset($txDetails->status) && isset($txDetails->status) == "200") {
     //A sample response from the webhook
 /*  $txDetails['status']
