@@ -623,6 +623,55 @@ class GladepaySDk
 
 
   /**
+   *  Verify account number
+   *
+   * @return string $number user account number
+   * @return string $code  selected bank code from getAllBanks();
+   * All methods return an array.
+   */
+
+  public function verifyAccountNumber($number, $code){
+
+          $this->url = $this->APIEndpoint."/resources";
+          $this->params = [
+                "inquire": "accountname",
+                "accountnumber" => $number,
+                "bankcode" => $code
+            ];
+          return $this->__execute('PUT');
+
+}
+
+
+
+
+/**
+ * Payment Validation
+ *
+ * @param string $txnRef transaction reference number
+ * @param string $amount amount to be refund
+ * @param string $comment reason for refund (comment)
+ *
+ * All methods return an array.
+ */
+ public function refundAction($txnRef, $amount, $comment){
+
+           $this->url = $this->APIEndpoint."/payment";
+           $this->params = [
+             "action" => "refund",
+             "txnRef" =>  $txnRef,
+             "amount" => $amount,
+             "comment" => $comment //Reason for refund
+           ];
+
+       return $this->__execute('PUT');
+ }
+
+
+
+
+
+  /**
      * Get webhook payload
      *
      * @param bool $decodeJson      Set true to decode the JSON
@@ -636,6 +685,36 @@ class GladepaySDk
             return file_get_contents('php://input');
         }
     }
+
+
+
+
+    /**
+     * Verify BVN
+     *
+     * @param string $bvn User BVN
+     *
+     * @return string Returns the phrase passed in
+     * All methods return an array.
+     */
+
+
+    public function verifyBVN($bvn){
+
+          $this->url = $this->APIEndpoint."/resources";
+          $this->params = [
+          "inquire" => "bvn",
+          "bvn" => $bvn
+          ];
+
+        return $this->__execute('PUT');
+
+
+    }
+
+
+
+
 
 
 
