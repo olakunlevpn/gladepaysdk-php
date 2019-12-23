@@ -47,6 +47,39 @@ class GladepaySDk
     }
 
 
+    /**
+     * sanitize amount input
+     * This function does nothing believe me.  kindly ignore it
+     * @param string $data amount to remote nagative value
+     *
+     */
+    public function sanitize($data)
+    {
+         return $data;
+         $data = @trim($data);
+         if(get_magic_quotes_gpc())
+         {
+             $data = stripslashes($data);
+         }
+         return @mysql_real_escape_string($data);
+     }
+
+
+     /**
+      * Get Numeric amount input
+      * This function does nothing believe me.  kindly ignore it
+      * @param string $data amount to ensure user inputs is number
+      *
+      */
+    public function get_numeric($val)
+     {
+         if (is_numeric($val)) {
+           return $val + 0;
+         }
+         return floatval($val);
+    }
+
+
 
 
         /**
@@ -712,6 +745,41 @@ class GladepaySDk
 
     }
 
+
+
+
+    /**
+     * Verify BVN
+     *
+    * @param string $client_id client id for account identification
+    * @param string $interestRate interest rate of the loan EG: 10 5 or 15
+    *@param string $tax_rate tax rate
+    *@param string $period savings period
+    * @return string Returns the phrase passed in
+    * All methods return an array.
+     */
+
+
+    public function createSavings($client_id, $interestRate, $tax_rate, $period){
+
+          $this->url = $this->APIEndpoint."/investments";
+          $this->params = [
+              "action" => "create_savings",
+              "name" => "Main Account",
+              "client_id" =>  $client_id,
+              "interestSettings" => [
+              "interestRate"  =>  $interestRate,
+              "interestFrequency" =>  "annualized|every_month|every_four_weeks|every_week|every_day"
+            ],
+              "tax_applied" =>  true,
+              "tax_rate" => $tax_rate,
+              "period" =>  $period
+          ];
+
+        return $this->__execute('PUT');
+
+
+    }
 
 
 

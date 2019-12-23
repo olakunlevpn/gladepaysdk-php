@@ -1,6 +1,6 @@
 # GladePay PHP
 
- A Gladepay SDK written in PHP
+ A Gladepay SDK written in PHP (www.gladepay.com)
 
 
  [![Issues](https://img.shields.io/github/issues/olakunlevpn/gladepaysdk-php?style=flat-square)](https://github.com/olakunlevpn/gladepaysdk-php/issues)
@@ -12,6 +12,10 @@
 
 
 
+
+> **Note:** This repository contains the Gladepay SDK integrating gladepay.com API into your project. You need a Merchant ID and Key to authenticate against the API register here https://dashboard.gladepay.com/register or use the demo Test API Credentials:
+Merchant ID: GP0000001
+Merchant Key: 123456789
 
 
 ## 1. Installation
@@ -39,15 +43,14 @@ $merchant_key = "123456789"; //To get your live credentials register here https:
 $Glade = new GladepaySDk($merchant_id, $merchant_key, true); //Change value to true if you are using demo merchant and key
 ```
 
+### Documentation
 
-## Contributing
-
-Please see [CONTRIBUTING](https://github.com/olakunlevpn/gladepaysdk-php/blob/master/CONTRIBUTING.md) for details.
+If you don't understand something about Gladpaysdk SDK, the [extensive documentation](https://developer.gladepay.com/api/) is a great place to look for answers.
 
 ## Credits
 
 - [Olakunlevpn](https://github.com/olakunlevpn)
-- [All Contributors](https://github.com/olakunlevpn/gladpaysdk-php/contributors)
+- [All Contributors](https://github.com/olakunlevpn/gladepaysdk-php/graphs/contributors)
 
 ## License
 
