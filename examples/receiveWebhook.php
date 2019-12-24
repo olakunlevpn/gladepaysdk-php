@@ -7,7 +7,7 @@ $merchant_id = "GP0000001"; //To get your live credentials register here https:/
 $merchant_key = "123456789"; //To get your live credentials register here https://dashboard.gladepay.com/register
 
 //Auth session with your Merchant ID and Merchant Key
-$Glade = new GladepaySDk($merchant_id, $merchant_key, true); //Change value to true if you are using demo merchant and key
+$Glade = new GladepaySDk($merchant_id, $merchant_key, true); //Change value to true if you are using demo merchant ID and key
 
 $payload = $Glade->getWebhookPayload();
 $txDetails = $Glade->verifyTransaction($payload['txnRef']);
@@ -29,7 +29,7 @@ Error Codes
 
 
 */
-
+/*
 if (isset($txDetails->status) && isset($txDetails->status) == "200") {
     //A sample response from the webhook
 /*  $txDetails['status']
@@ -41,10 +41,10 @@ if (isset($txDetails->status) && isset($txDetails->status) == "200") {
 
 
     */
-
+/*
     //Your transaction is Successful
 } else {
   //No transaction is processed
 }
-
+  */
  ?>
