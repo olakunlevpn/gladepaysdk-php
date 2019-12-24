@@ -785,6 +785,36 @@ class GladepaySDk
 
 
 
+    /**
+     * Create Personalized Account
+     *
+     * @param string $names Name to appear on the account details EG: Firstname, Lastname (Other name is Optional)
+     * @param string $reference A reference number that will be used to track the account number generated and payments
+     * @param string $email Email address that belongs to the customer
+     *
+     * All methods return an array.
+     */
+
+
+    public function createPersonalizedAccount($names, $reference, $email){
+
+          $this->url = $this->APIEndpoint."/resources";
+          $this->params = [
+            "request" => "personalized-accounts",
+          	"name" => $names,
+          	"reference" => $reference,
+          	"email" => $email
+          ];
+
+        return $this->__execute('PUT');
+
+
+    }
+
+
+
+
+
 
     private function __execute(string $requestType = 'POST') {
        $ch = curl_init($this->url);

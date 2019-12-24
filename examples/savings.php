@@ -14,5 +14,11 @@ $merchant_key = "123456789"; //To get your live credentials register here https:
 $Glade = new GladepaySDk($merchant_id, $merchant_key, true); //Change value to true if you are using demo merchant and key
 
 //var_dump($Glade->createSavings());
+/*
+$names ="John Doe";
+$reference = "105158623293";
+$email = "email@email.com";
+var_dump($Glade->createPersonalizedAccount($names, $reference, $email));
 
+*/
 ?>
