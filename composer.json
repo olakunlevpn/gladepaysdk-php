@@ -1,6 +1,6 @@
 {
     "name": "olakunlevpn/gladepaysdk-php",
-    "description": "A Gladpay SDK written in PHP",
+    "description": "A Gladpay SDK written in PHP.",
     "keywords": [
         "Gladpay", "api", "payment", "gateway"
     ],
@@ -20,6 +20,7 @@
             "Olakunlevpn\\Gladepaysdk\\": "src"
         }
     },
+
     "require": {
        "php": ">=7.0",
        "ext-curl": "*",
