@@ -1,4 +1,13 @@
 <?php
+/**
+ *
+ *
+ * @package Gladepay SDK PHP
+ * @package https://github.com/olakunlevpn/gladepaysdk-php
+ * @author  Olakunlevpn <olakunlevpn@live.com>
+ * @license https://opensource.org/licenses/MIT The MIT Public License
+ * @version 0.0.6
+ */
 
 namespace Olakunlevpn\Gladepaysdk;
 
@@ -25,6 +34,10 @@ class GladepaySDk
            $this->testNet = $testNet;
            $this->APIEndpoint = (!$this->testNet) ? self::GLADEPAY_PRODUCTION_API_ENDPOINT : self::GLADEPAY_TESTNET_API_ENDPOINT;
            $this->AuthAPIEndpoint = (!$this->testNet) ? self::GLADEPAY_PRODUCTION_API_ENDPOINT : self::GLADEPAY_TESTNET_API_ENDPOINT;
+
+           if (empty($this->merchant_id) || empty($this->merchant_key)) {
+            throw new \Exception('Error: No Merchant Key or Merchant ID passed');
+        }
        }
 
 
