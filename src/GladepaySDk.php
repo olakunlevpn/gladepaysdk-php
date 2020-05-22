@@ -64,7 +64,6 @@ class GladepaySDk
 
      /**
       * Get Numeric amount input
-      * This function does nothing believe me.  kindly ignore it
       * @param string $data amount to ensure user inputs is number
       *
       */
