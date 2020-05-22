@@ -41,29 +41,13 @@ class GladepaySDk
        }
 
 
-    /**
-     * Friendly welcome
-     * This function does nothing believe me.  kindly ignore it
-     * @param string $phrase Phrase to return
-     *
-     *  * All methods return an array.
-     */
-    public function echoPhrase()
-    {
-
-
-      $this->url = $this->APIEndpoint;
-      return $this->__execute('PUT');
-
-
-
-    }
+   
 
 
     /**
      * sanitize amount input
-     * This function does nothing believe me.  kindly ignore it
-     * @param string $data amount to remote nagative value
+     * sanitize amount against nagative value
+     * @param string $data amount to remove nagative value
      *
      */
     public function sanitize($data)
