@@ -34,7 +34,7 @@ Merchant Key: 123456789
 require_once "vendor/autoload.php";
 
 
-use Olakunlevpn\Gladepaysdk\GladepaySDK;;
+use Olakunlevpn\Gladepaysdk\GladepaySDk;
 
 $merchant_id = "GP0000001"; //To get your live credentials register here https://dashboard.gladepay.com/register
 $merchant_key = "123456789"; //To get your live credentials register here https://dashboard.gladepay.com/register
